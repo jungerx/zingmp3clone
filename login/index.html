@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+        <input id="register_toggle" type="checkbox">
+        <div class="slider">
+          <form class="form formSignIn">
+            <span class="title">Login</span>
+            <div class="form_control">
+              <input required="" class="input" type="text" id="name" name="name" placeholder="User name">
+            </div>
+            <div class="form_control">
+              <input required="" class="input" type="password" id="password" name="password"  placeholder="Password">
+            </div>
+            <button>Login</button>
+            <span class="bottom_text">Don't have an account? <label class="swtich" for="register_toggle">Sign Up</label> </span>
+          </form>
+          <form class="form formSignUp">
+            <span class="title">Sign Up</span>
+            <div class="form_control">
+              <input required="" class="input" type="text"  id="nameSign" placeholder="User name" name="nameSign">
+            </div>
+            <!-- <div class="form_control">
+              <input required="" class="input" type="email"  id="email" placeholder="Email" name="email">
+            </div> -->
+            <div class="form_control">
+              <input required="" class="input" type="password"  id="passwordSign" placeholder="Password" name="passwordSign">
+            </div>
+            <button>Sign Up</button>
+      
+            <span class="bottom_text">Already have an account? <label class="swtich" for="register_toggle">Sign In</label> </span>
+          </form>
+      
+          </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+      <script src="../assets/js/login.js"></script>
+</body>
+</html>

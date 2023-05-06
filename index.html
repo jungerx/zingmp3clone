@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <title>zing mp3</title>
+</head>
+<body>
+        <!-- header -->
+        <header>
+                <h1><a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/ZingMP3logo.svg/320px-ZingMP3logo.svg.png">
+                    <img src="./assets/images/top/logo.svg" alt="">
+                </a></h1>
+                <!-- menu -->
+                <div class="menu">
+                    
+                    <ul class="top-menu">
+                        <li>
+                            <a href="#"><i class="fa-solid fa-music"></i><span> Thư viện</span></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-record-vinyl"></i><span> Khám phá</span></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-sliders"></i><span>#zingchart</span> </a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-radio"></i><span>Radio</span> </a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-squarespace"></i><span>Theo dõi</span> </a>
+                        </li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#"><i class="fa-solid fa-music"></i><span> Nhạc mới</span></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas icon-nav_label fa-icons"></i><span> Chủ đề và thể loại</span></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas icon-nav_label fa-star"></i><span>Top 100</span> </a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas icon-nav_label icon_add_big fa-caret-square-right"></i><span> MV</span></a>
+                        </li>
+                        <li class="login-inmenu">
+                            <p>Đăng nhập để khám phá <br> playlist dành cho bạn</p>
+                            <button id="btn-mz-list" class="btn-mz-list"><a href="./login/index.html" >Đăng
+                                    nhập</a></button>
+                        </li>
+                    </ul>
+                    <ul class="btn-create">
+                        <li>
+                            <a  href="#"><i class="fa-solid fa-plus"></i><span> Tạo playlist mới</span></a>
+                        </li>
+                 </ul>
+                </div>
+        </header>
+
+        <!-- main -->
+        <main>
+                <!-- search login -->
+                <div class="top-bar row">
+                    <div class="search row">
+                        <div class="box-ic">
+                            <a href="#" class="director"><i class="fa-solid fa-arrow-right arrow"></i></a>
+                            <a href="#" class="director"><i class="fa-solid fa-arrow-left arrow"></i></a>
+                        </div>
+                        <div class="detail-search">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass arrow"></i></a>
+                            <input type="text" placeholder="Tìm kiếm bài hát, nghệ sĩ, lời bài hát...">
+                        </div>
+                    </div>
+                    <div class="theme">
+                        <button >Tải bản Windows</button>
+                        <a href="#"><i class="fa-sharp fa-regular fa-gem"></i></a>
+                        <!-- <a href="#"><i class="bi bi-upload header__nav-icon arrow"></i></a> -->
+                        <div class="edit">
+                            <i class="fa-solid fa-gear arrow"></i>
+                            <ul class="drop">
+                                <li>
+                                    <a href="#">VIP</a>
+                                </li>
+                                <li>
+                                    <a href="#">Library</a>
+                                </li>
+                                <li class="logout">
+                                    <a href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btnlogin"><a href="./login/index.html" >Đăng nhập</a></button>
+                    </div>
+                </div>
+
+                <!-- Nội dung -->
+                <div class="content">
+                <!-- banner -->
+                    <div class="banner-slider">
+                        <div class="slider">
+                            <a href="#">
+                                <img src="https://photo-zmp3.zmdcdn.me/banner/d/1/8/7/d187f7c347f245df7a694cae5d1477d2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slider">
+                            <a href="#">
+                                <img src="https://photo-zmp3.zmdcdn.me/banner/5/a/b/7/5ab7fc7ce014a1f83a7cf2257e0e6a95.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slider">
+                            <a href="#">
+                                <img src="https://photo-zmp3.zmdcdn.me/banner/1/0/6/2/1062d83af2ff5c5fbbba88331219ebce.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="slider">
+                            <a href="#">
+                                <img src="https://photo-zmp3.zmdcdn.me/banner/a/d/a/4/ada41294a80feb2e51d65552835e7e81.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                <!-- Thể loại nhạc danh sách nhạc -->
+
+                    <div class="list-music">
+                        <h2 class="title">Mới phát hành</h2>
+                        <div class="btn-kind">
+                            <div class="">
+                                <button class="active" data="all">
+                                    Tất cả
+                                </button>
+                                <button data="vn">
+                                    Việt Nam
+                                </button>
+                                <button data="in">
+                                    Quốc Tế
+                                </button>
+                            </div>
+                            <div class="all">
+                                <a href="#">Tất cả <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                        <ul class="data-list row">
+                            <li data="vn">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/8/0/3/d/803daa9da530c59185757d62f1053c6e.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li data="vn">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/5/a/3/5/5a355f5194114fe00735bc42833c18b7.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li data="vn">
+                                <a href="#">
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/8/7/c/487c965b6dee20576f77fd76a41233f8.jpg">
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li data="vn">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/8/7/c/487c965b6dee20576f77fd76a41233f8.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li data="in">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/cover/4/8/7/c/487c965b6dee20576f77fd76a41233f8.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li data="in">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/banner/8/7/2/5/872582e1827ccbbb2d6c1ca079da2113.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                            <li data="in">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/banner/9/6/2/c/962c03a30888988dbc24ee67b91f76f4.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li>
+                             <li data="in">
+                                <a href="#">
+                                    <figure>
+                                        <img src="https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_webp/banner/8/7/2/5/872582e1827ccbbb2d6c1ca079da2113.jpg">
+                                    </figure>
+                                    <div class="info">
+                                        <div class="music-name">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="music-singer">
+                                            <p>No name</p>
+                                        </div>
+                                        <div class="date">
+                                            <p>hôm qua</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="overlay">
+                                    <i class="fa-solid fa-play"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+
+                    <!-- Khám phá -->
+
+                    <div class="dr-ms">
+                        <h2 class="title">Khám phá</h2>
+                        <ul class="ms-list row">
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                            <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/5/5/f/a/55fa8c513461bef6c8e37f188347e0eb.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Đi chơi xa cùng những giai điệu <br>V-Pop quen thuộc</p>
+                                
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/b/9/d/5/b9d56d0e4dc2a5e39e0e10f63694b987.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Lên xe và tạo nên những kỉ niệm<br>tuyệt vời của tuổi trẻ</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/f/1/3/8/f138a02472481738a6660e97421ceff2.jpg" alt="">
+                               </figure>
+                               </div>
+                               <div class="over-ms">
+                                <div class="box-over">
+                                    <a href="#">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                </div>
+                            </div>
+                               
+                                </a>
+                                <p>Âm nhạc 'Mộc' đồng hành cùng bạn<br>trên mọi cung đường</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/2/6/6/d/266d1903afe5af278f886f26886bb3a8.jpg" alt="">
+                                   </figure>
+                                   </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Giai điệu đầy năng lượng không thể<br>thiếu cho chuyến đi xa</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/c/4/9/b/c49b67d64a70728b72ceb22abec7e09b.jpg" alt="">
+                                    </figure>
+                                    </div>
+
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Gia đình, âm nhạc và những điều thú<br>vị xuyên suốt mọi hành trình</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- nhạc mới -->
+
+                    <div class="new-ms">
+                        <h2 class="title">Nhạc mới</h2>
+                        <ul class="ms-list row">
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/4/e/f/0/4ef0ab0af9a4b2866bb3f006db5386db.jpg" alt="">
+                                    </figure>
+                                    </div>
+
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Va vào những giai điệu thư giãn của<br>V-Pop</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/a/4/a/5/a4a5f7d375e373d2856aa75185e5a615.jpg" alt="">
+                                    </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Ở đây có những bản hit cực chill, vừa<br>nghe vừa feel</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/9/2/e/3/92e34e8a92ba589ba41c078bfbbf57f0.jpg" alt="">
+                                   </figure>
+                                   </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Giai điệu Guitar đem lại cảm giác yên<br>bình nhất cho bạn</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/8/1/e/9/81e96c0d7646b1d357298e35cecb1762.jpg" alt="">
+                                   </figure>
+                                   </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Giai điệu Guitar đem lại cảm giác yên<br>bình nhất cho bạn</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/5/3/c/8/53c8e5053f0ec4b5a2bed26c37a27c73.jpg" alt="">
+                                   </figure>
+                                   </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Thả mình cùng những giai điệu V-Pop<br>nhẹ nhàng</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Top 100  -->
+                    <div class="top-ms">
+                        <h2 class="title">Top 100</h2>
+                        <ul class="ms-list row">
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/0/9/5/4/09542fd83e019d4734587f836bc9bbc0.jpg" alt="">
+                                  </figure>
+                                  </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Va vào những giai điệu thư giãn của<br>V-Pop</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/8/5/5/b/855bb71b9bc9a577ea6627df65a2adeb.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Thả mình cùng những giai điệu V-Pop<br>nhẹ nhàng</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/c/5/f/c/c5fc615c43215c6b72676f42767855ee.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Gia đình, âm nhạc và những điều thú<br>vị xuyên suốt mọi hành trình</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/7/7/8/3/7783eb20c347a1e5192c6d0c05ed325a.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Giai điệu đầy năng lượng không thể<br>thiếu cho chuyến đi xa</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="brd-img">
+                                        <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_webp/cover/d/d/7/c/dd7ce7d76a8b994d1ab04184c71f32f2.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="over-ms">
+                                        <div class="box-over">
+                                            <a href="#">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <p>Đi chơi xa cùng những giai điệu <br>V-Pop quen thuộc</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Đối tác âm nhạc -->
+                    <div class="part-ms">
+                        <h3><a href="#">Đối tác âm nhạc</a></h3>
+                        <ul class="list-part row">
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/orcahrd.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/universal-1.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/danal.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/genie.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/stone-music.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/SM-Entertainment.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/route-note.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/believe.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/orcahrd.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/universal-1.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/danal.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/genie.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/stone-music.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/SM-Entertainment.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/route-note.png" alt="">
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <img src="https://static-zmp3.zmdcdn.me/skins/zmp3-v6.1/images/partner_logo/believe.png" alt="">
+                                </figure>
+                            </li>
+
+                        </ul>
+                    </div>
+
+            </div>
+        </main>
+        <footer>
+            <div class="content">
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="music-list-music container-music ">
+                            <div class="container-namemusic">
+                                <figure>
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/7/3/e/8/73e8ee485722c6585276226c98448660.jpg" alt="">
+                                </figure>
+                                <div class="song-name">
+                                    <p>Bo Xi Bo</p>
+                                    <p>Hoàng Thùy Linh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-playmusic">
+                            <div class="play-music">
+                                <a href=""><i class="fa-solid fa-shuffle"></i></a>
+                                <a href=""><i class="fa-solid fa-caret-left"></i></a>
+                                <a href=""><i class="fa-sharp fa-regular fa-circle-play btn-play"></i></a>
+                                <a href=""><i class="fa-solid fa-caret-right"></i></a>
+                                <a href=""><i class="fa-solid fa-repeat"></i></a>
+                                <a href=""><i class="fa-light fa-slider"></i></a>
+                            </div>
+                            <div class="music-control__progress">
+                                <span
+                                    class="music-control__progress-time-start js__music-control__progress-time-start js__main-color">00:00</span>
+                                <input id="progress" class="music-control__progress-input" type="range" value="0" step="1"
+                                    min="0" max="100">
+                                <span
+                                    class="music-control__progress-time-duration js__music-control__progress-time-duration js__main-color">00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="volume">
+                            <a href="">
+                                <i class="fa-solid fa-video"></i>
+                            </a>
+                            <a href=""><i class="fa-solid fa-microphone"></i></a>
+                            <a href=""></a><i class="music-control__right-icon4 js__main-color fas fa-volume-down"></i>
+                            <!-- <i class="music-control__right-icon5 js__main-color fas fa-volume-mute"></i> -->
+                            <div>
+                                <div class="music-control__volume-progress">
+                                    <input id="progress1" class="music-control__volume-input" type="range" value="0"
+                                        step="1" min="0" max="100">
+                                </div>
+                            </div>
+                            <a href="">
+                                <i class="fa-sharp fa-regular fa-slider"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-solid fa-list"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- footer -->
+        
+
+
+
+        <!-- js -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+          <script src="./assets/js/slick.min.js"></script>
+          <script src="./assets/js/top.js"></script>
+
+</body>
+</html>
